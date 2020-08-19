@@ -1,0 +1,130 @@
+{
+    "@context": [{
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "dateTime": "iudx:observationDateTime",
+        "VehicleStatus": "iudx:vehicleRunningStatus",
+        "altitude": "iudx:vehicleAltitude",
+        "angle": "iudx:vehicleBearing",
+        "batteryStatus": "iudx:deviceBatteryStatus",
+        "ignition": "iudx:ignitionStatus",
+        "location": "iudx:location",
+        "simNo": "iudx:deviceSimNumber",
+        "speed": "iudx:vehicleSpeed",
+        "vehicleNo": "iudx:vehicleLicensePlate",
+        "wardNo": "iudx:wardID"
+    }],
+    "type": [
+        "iudx:DataDescriptor",
+        "iudx:WmgmtVehicle"
+    ],
+    "id": "swm_vehicle_varanasi_example",
+    "description": "Data Descriptor for solid waste management vehicles in Varanasi city.",
+    "vehicleRunningStatus": {
+        "type": [
+            "ValueDescriptor"
+        ],
+        "description": "Moving status of the vehicle, one of running, waiting, stopped.",
+        "unitCode": "C62",
+        "unitText": "dimensionless",
+        "dataSchema": "iudx:Text"
+    },
+    "vehicleAltitude": {
+        "type": [
+            "ValueDescriptor"
+        ],
+        "description": "Gives the current altitude of the vehicle using GPS .",
+        "unitCode": "C62",
+        "unitText": "dimensionless",
+        "dataSchema": "iudx:Number"
+    },
+    "vehicleBearing": {
+        "type": [
+            "ValueDescriptor"
+        ],
+        "description": "Gives the vehicle GPS angle measured in a clockwise direction from the True North.",
+        "unitCode": "C62",
+        "unitText": "dimensionless",
+        "dataSchema": "iudx:Number"
+    },
+    "deviceBatteryStatus": {
+        "type": [
+            "ValueDescriptor"
+        ],
+        "description": "Gives the Battery charging status of the reporting device(Connected, Disconnected).",
+        "unitCode": "C62",
+        "unitText": "dimensionless",
+        "dataSchema": "iudx:Text"
+    },
+    "observationDateTime": {
+        "type": [
+            "ValueDescriptor"
+        ],
+        "description": "Last reported time of observation",
+        "dataSchema": "iudx:DateTime"
+    },
+    "ignitionStatus":{
+    "type": [
+             "ValueDescriptor"
+         ],
+         "description": "GIves the ignition status of the vehicle.(Y, N)",
+         "unitCode": "C62",
+         "unitText": "dimensionless",
+         "dataSchema": "iudx:Text"
+    },
+    "location": {
+        "type" : [
+            "Point"
+        ], 
+        "description": "Describes the GeoJSON Point.",
+        "coordinates" : {
+            "description": "Coordinates for the GeoJSON object.",
+            "dataSchema": "iudx:Number", 
+        }
+    },
+    "deviceSimNumber": {
+        "type": [
+            "ValueDescriptor"
+        ],
+        "description": "Gives the sim number of the device in the waste management vehicle.",
+        "unitCode": "C62",
+        "unitText": "dimensionless",
+        "dataSchema": "iudx:Text"
+    },
+    "vehicleSpeed": {
+        "type": [
+            "ValueDescriptor"
+        ],
+        "description": "Gives the Speed of the vehicle.",
+        "unitCode": "KMH",
+        "unitText": "kilometre per hour",
+        "dataSchema": "iudx:Number"
+    },
+    "vehicleType": {
+        "type": [
+            "ValueDescriptor"
+        ],
+        "description": "The type of vehicle, for e.g, hopper, compactor, tipper, dumper.",
+        "unitCode": "C62",
+        "unitText": "dimensionless",
+        "dataSchema": "iudx:Number"
+    },
+    "vehicleLicensePlate": {
+        "type": [
+            "ValueDescriptor"
+        ],
+        "description": "Gives the License Plate number of the vehice. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)",
+        "unitCode": "C62",
+        "unitText": "dimensionless",
+        "dataSchema": "iudx:Number"
+    },
+    "wardID": {
+        "type": [
+            "ValueDescriptor"
+        ],
+        "description": "Gives the ward number where the bin is located at.",
+        "unitCode": "C62",
+        "unitText": "dimensionless",
+        "dataSchema": "iudx:Text"
+    }
+}
